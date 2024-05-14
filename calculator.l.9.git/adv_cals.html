@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="result" style="width: 100px;">
+    <br /> <br />
+    <button onclick="displayNum(1)">1</button>
+    <button onclick="displayNum(2)">2</button>
+    <button onclick="displayNum(3)">3</button>
+    <button onclick="setOperator('+')">+</button>
+    <br />
+    <button onclick="displayNum(4)">4</button>
+    <button onclick="displayNum(5)">5</button>
+    <button onclick="displayNum(6)">6</button>
+    <button onclick="setOperator('-')">-</button>
+    <br />
+    <button onclick="displayNum(7)">7</button>
+    <button onclick="displayNum(8)">8</button>
+    <button onclick="displayNum(9)">9</button>
+    <button onclick="setOperator('*')">*</button>
+    <br />
+    <button onclick="displayNum(0)">0</button>
+    <button onclick="displayNum('.')">.</button>
+    <button onclick="clearResult()">C</button>
+    <button onclick="setOperator('/')">/</button>
+    <button onclick="equals()">=</button>
+
+    <script>
+
+      let memory 
+      let operator = ''
+
+    function displayNum(num) {
+        if (result.value === "0" && num !== ".") {
+        result.value = num
+    }
+    else {
+      result.value += num
+    }
+    }
+
+    function clearResult() {
+        result.value = "0"
+        memory = 0
+        operator = '';
+    }
+
+     function setOperator(op) {
+       memory = parseFloat(result.value)
+       operator = op
+       result.value = "0"
+    }
+
+     function equals() {
+
+      let currentValue = parseFloat(result.value);
+      let resultValue = 0;
+
+      if (operator  === "+" ) {
+         resultValue = memory + currentValue
+      } 
+     else if (operator === "-") {
+        resultValue = memory - currentValue
+      }
+      else if (operator === "*") {
+        resultValue = memory * currentValue
+      }
+      else if (operator === "/") {
+        resultValue = memory / currentValue
+      }
+      
+      result.value = resultValue;
+      memory = 0;
+      operator = '';
+    }
+   
+
+    </script>
+</body>
+</html>

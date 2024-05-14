@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="myName"/>
+    <input id="hello"/>
+    <button onclick="printHllo()">Hello</button>
+    <button onclick="printMyName()">Press Me</button>    
+    <button onclick="printName()">Press Me 1</button>
+    <button onclick="printLastName()">Press Me 2</button>
+    <button onclick="printDate()">Press Me 3</button>
+<script>
+    function printName() {
+        console.log("Hodaya !")
+    }
+   function printLastName() {
+        console.log("Mantzur !")
+   }
+   function printDate() {
+        console.log("10-May-24");
+   }
+   function printMyName() {
+        console.log(myName.value);
+   }
+   function printHllo() {
+        console.log("Hello ", hello.value);
+   }
+</script>
+
+</body>
+</html>

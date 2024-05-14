@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <input id="num1">
+  <br>
+  <button onclick="plus()">+</button>  
+  <button onclick="minus()">-</button>  
+  <br>
+  <input id="num2">
+  <br>
+  =
+  <br>
+  <input id="result"/>
+  <script>
+   function plus() {
+    result.value =Number(num1.value)+Number(num2.value);
+   }
+   function minus() {
+    result.value =Number(num1.value)-Number(num2.value);
+   }
+
+  </script>
+</body>
+</html>
